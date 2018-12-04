@@ -1,0 +1,26 @@
+STEP 1: Download Nifi Tar from ASF
+nifi-1.7.1-bin.tar.zg
+STEP 2: Untar the downloaded nifi tar
+cd /home/credo/Downloads
+tar -xvf nifi-1.7.1-bin.tar.gz
+STEP 3: Move the nifi tar file to hadoop-env location
+cp -r nifi-1.7.1 /usr/local/hadoop-env/
+STEP 4: Set Path variable in .bashrc file
+cd ~
+gedit .bashrc
+export NIFI_HOME = /usr/local/hadoop-env/nifi-1.7.1
+export PATH = $PATH:$NIFI_HOME/bin
+save and close the document
+source .bashrc
+STEP 5: Start nifi server using the below command,
+nifi.sh start
+check the status of nifi server using the below command,
+nifi.sh status
+Note: Wait till nifi is completely up. You can check the log for more details,
+cd /usr/local/hadoop-env/nifi-1.7.1/logs
+tail -f nifi-app-logs
+Wait till, you see “nifi checkpointed successfully” message in log this log fileSTEP 6: Open browser and hit the below usr,
+http://localhost:8080/nifi/
+You can view the nifi dashboard..!! :)
+To stop the nifi server use the below command,
+nifi.sh stop
