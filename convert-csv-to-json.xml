@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <template encoding-version="1.1">
-  <description>This flow utilizes the ConvertRecord processor and
+ <description>This flow utilizes the ConvertRecord processor and
 Record Reader/Writer controller services (introduced in  NiFI 1.2)
 to convert a CVS file into JSON format.</description>
   <groupId>855d9cd4-015d-1000-8dc5-71f1f96a4779</groupId>
